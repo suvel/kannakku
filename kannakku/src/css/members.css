@@ -1,0 +1,48 @@
+.members{
+    padding: 0.2rem 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+ }
+ 
+ .member{
+   width: 10rem;
+   min-width: 10rem;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 0.2rem 0.4rem;
+ }
+ 
+ .m-info{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 0.5rem;
+ }
+ 
+ .m-sum::before{
+   content: '₹'
+ }
+ 
+ .m-prod{
+   padding: 0.5rem;
+   display: flex;
+   gap:5px;
+ }
+ 
+ .spd-var{
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 0.1rem 0.2rem;
+ }
+ 
+ .m-add{
+   align-self: center;
+ }
+ 
+ .m-add::before{
+   content: '✣';
+   width: 10px;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 0.2rem 0.4rem;
+ }

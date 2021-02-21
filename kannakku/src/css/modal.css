@@ -1,0 +1,42 @@
+.modal {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+}
+.open {
+  transform: translate(-50%, -50%);
+}
+.close {
+  transform: scale(0);
+}
+.mod-head {
+  min-width: 15rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.mod-head > button {
+  border-radius: 20px;
+  border: 3px double;
+}
+.mod-body {
+  padding: 0.5rem;
+}
+.sub-con {
+  width: 100%;
+}
+.sub-btn {
+  border-radius: 20px;
+  border: 3px double;
+  background: #03a9f452;
+  display: block;
+  margin-left: auto;
+  font-size: large;
+}

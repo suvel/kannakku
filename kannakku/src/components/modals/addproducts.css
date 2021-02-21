@@ -1,0 +1,35 @@
+.container {
+  padding: 0.5rem 0.8rem;
+}
+.form-container {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+.field {
+  display: grid;
+  grid-template-columns: 7rem auto;
+}
+.field label {
+  text-align: left;
+}
+.var-ip {
+  width: 5rem;
+  font-size: xx-large;
+  border: 1px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+.name-n-val {
+  display: grid;
+  grid-template-columns: auto 8px 3rem;
+  gap: 5px;
+}
+.name-n-val > input {
+  font-size: large;
+  border: 1px solid;
+  border-radius: 10px;
+}
+.val-ip::before {
+  content: "3";
+  text-align: center;
+}
