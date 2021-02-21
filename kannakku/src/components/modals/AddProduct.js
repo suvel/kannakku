@@ -25,7 +25,7 @@ const AddProduct = ({ open: modState, toggle: setModState, onAddProduct }) => {
     console.log({variable, name, val});
   }, [variable, name, val]);
   const handelCancel = () => setModState(false);
-  const btnArr = [{ symb: "cancel", color: "red", click: handelCancel }];
+  const btnArr = [{ symb: "cancel", color: "red", clickFn: handelCancel }];
   return (
     <>
       <Modal open={modState} buttons={btnArr || []}>
