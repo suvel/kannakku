@@ -1,4 +1,5 @@
 import React from "react";
+import PrdChooser from "./PrdChooser";
 import "../css/members.css";
 /**
  * members data structure
@@ -22,19 +23,20 @@ const Member = ({ id, name, sum, prods }) => {
           </div>
         ))}
       </div>
+      <PrdChooser />
     </div>
   );
 };
-const AddMembersBtn=()=>{
-    return <div class="m-add"/>
-}
+const AddMembersBtn = () => {
+  return <div class="m-add" />;
+};
 const Members = () => {
   return (
     <div className="members">
       {dummyMembers.map((memProps) => {
         return <Member {...memProps} />;
       })}
-      <AddMembersBtn/>
+      <AddMembersBtn />
     </div>
   );
 };

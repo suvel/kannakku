@@ -2,8 +2,10 @@
  * product data structure
      { var: "", name: "", val: 0 }
  */
-import React, { useState } from "react";
+import React, { useState, useReducer, useContext } from "react";
 import AddProduct from "./modals/AddProduct";
+import { kannakkuContext } from "./context";
+
 import "../css/products.css";
 const dummyProducts = [
   { id: 1, variable: "☕", name: "tea", val: 10 },
@@ -21,14 +23,15 @@ const Product = ({ id, variable: va, name: n, val: v }) => {
 };
 const AddProductBtn = ({ ...props }) => <div {...props} class="p-add" />;
 const Products = () => {
-  const [productList, setProductList] = useState(dummyProducts);
+  const { state, dispatch, kannakkuActions } = useContext(kannakkuContext);
+  const productList = state.productList;
+  const setProductList = (value) => {
+    dispatch({ type: kannakkuActions.ADD_PRODUCTS, payload: value });
+  };
   const [showAddProduct, setShowAddProduct] = useState(false);
   const showAddProductModal = () => setShowAddProduct(true);
   const handelAddProduct = (prdObj) => {
-    const lastIndex = productList.length - 1;
-    const nxtId = productList.sort((a, b) => a.id - b.id)[lastIndex].id;
-    debugger
-    setProductList((prd) => [...prd, { id: nxtId, ...prdObj }]);
+    setProductList(prdObj);
   };
   return (
     <>
